@@ -1,0 +1,44 @@
+﻿@model List<Menu>
+@{
+    var count = 1;
+}
+
+
+@if (Model.Any())
+{
+    @foreach (var data in Model)
+    {
+        <tr id="@data.Name" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-center hover:cursor-pointer">
+            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                @count
+            </td>
+            <td class="px-6 py-4 flex justify-center items-center">
+                <img src="http://localhost:5276/uploads/@data.Foto" class="w-[184px] h-[134px]" />
+            </td>
+            <td class="px-6 py-4 text-center">
+                @data.Name
+            </td>
+            <td class="px-6 py-4 text-center">
+                @data.Category!.CategoryName
+            </td>
+            <td class="px-6 py-4 text-center">
+                @data.Price
+            </td>
+            <td class="px-6 py-4 text-center">
+                @data.Sold
+            </td>
+            <td class="px-6 py-4 text-center">
+                <button class="font-medium p-2 text-blue-600 dark:text-blue-500 hover:underline" onclick="DeleteMenu(@data.Id,'@data.Name')">Hapus</button>
+                <button class="font-medium p-2 text-blue-600 dark:text-blue-500 hover:underline" data-toggle="modal" data-target="#myModal-@data.Id">Edit</button>
+                @await Html.PartialAsync("_PartialEditMenu", data)
+            </td>
+        </tr>
+        count++;
+    }
+}
+else
+{
+    <tr>
+        <td colspan="7" class="text-center text-bold p-4 text-xl">Tidak ada data</td>
+    </tr>
+}

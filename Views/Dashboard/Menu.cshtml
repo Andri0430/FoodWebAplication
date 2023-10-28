@@ -1,0 +1,152 @@
+﻿@{
+    Layout = "_SideBar";
+    var count = 1;
+}
+@model List<Menu>
+
+<div class="p-4 sm:ml-64">
+    <div class="flex flex-col gap-4 p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+        <div class="flex justify-between text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+            <div>
+                <p id="makanan-link" class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 hover:cursor-pointer">Makanan</p>
+                <p id="minuman-link" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 hover:cursor-pointer">Minuman</p>
+            </div>
+            <button type="button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                </svg>
+                <span class="sr-only">Open actions menu</span>
+            </button>
+            <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-xl max-h-full">
+                    @await Html.PartialAsync("_PartialAddMenu", new MenuDto());
+                </div>
+            </div>
+        </div>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            No.
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            Image
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            Menu name
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            Category
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            Price
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            Terjual
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                            <span class="sr-only">Edit</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="t-body">
+                    @if (Model.Any())
+                    {
+                        @foreach (var data in Model)
+                        {
+                            <tr id="@data.Name" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-center hover:cursor-pointer">
+                                <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    @count
+                                </td>
+                                <td class="px-6 py-4 flex justify-center items-center">
+                                    <img src="http://localhost:5276/uploads/@data.Foto" class="w-[184px] h-[134px]" />
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    @data.Name
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    @data.Category!.CategoryName
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    @data.Price
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    @data.Sold
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    <button class="font-medium p-2 text-blue-600 dark:text-blue-500 hover:underline" onclick="DeleteMenu(@data.Id,'@data.Name')">Hapus</button>
+                                    <button class="font-medium p-2 text-blue-600 dark:text-blue-500 hover:underline" data-toggle="modal" data-target="#myModal-@data.Id">Edit</button>
+                                    @await Html.PartialAsync("_PartialEditMenu", data)
+                                </td>
+                            </tr>
+                            count++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+        <td colspan="7" class="text-center text-bold p-4 text-xl">Tidak ada data</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function DeleteMenu(menuId, name) {
+        Swal.fire({
+            title: `Hapus Menu ${name}`,
+            icon: 'error',
+            showConfirmButton: true,
+            confirmButtonText: 'Ya',
+            showCancelButton: true,
+            cancelButtonText: 'Tidak',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var data = { id: menuId };
+                $.ajax({
+                    url: "/Dashboard/DeleteMenu",
+                    type: "POST",
+                    data: data,
+                    success: function (response) {
+                        if (response.success) {
+                            location.reload();
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    $('document').ready(function () {
+        $('#minuman-link').click(function () {
+            $(this).attr('class', 'inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 hover:cursor-pointer');
+            $('#makanan-link').attr('class', 'inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 hover:cursor-pointer');
+            loadData(2);
+        });
+
+        $('#makanan-link').click(function () {
+            $(this).attr('class', 'inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500 hover:cursor-pointer');
+            $('#minuman-link').attr('class', 'inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 hover:cursor-pointer');
+            loadData(1);
+        });
+
+        function loadData(categoryId) {
+            $.ajax({
+                type: 'POST',
+                url: '/Dashboard/MenuByCategory',
+                data: {id : categoryId},
+                success : function(data){
+                    $('#t-body').html(data);
+                }
+            })
+        }
+    });
+</script>

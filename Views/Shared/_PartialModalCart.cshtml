@@ -1,0 +1,54 @@
+﻿@model List<Cart>
+
+<div class="modal fade" id="myModal-y">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="flex justify-end">
+                <button type="button" class="text-2xl font-bold p-3 text-orange-700" data-dismiss="modal">&times;</button>
+            </div>
+            <form>
+                <div id="cart-list">
+                    @foreach (var data in Model)
+                    {
+                        <div class="flex gap-4 border border-b-gray-400 justify-between items-center p-3">
+                            <div>
+                                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="http://localhost:5276/uploads/@data.Menu!.Foto" />
+                            </div>
+                            <div class="flex flex-col justify-between text-black justify-center items-center h-full gap-6">
+                                <div class="flex flex-col">
+                                    <span>@data.Menu.Name</span>
+                                    <span>@data.Menu.Category!.CategoryName</span>
+                                </div>
+                                <input type="number" min="1" value="@data.Quantity" class="w-[48px]">
+                            </div>
+                            <div class="text-black flex flex-col justify-between items-center gap-8">
+                                <p>@data.Menu.Price</p>
+                                <button class="w-20 rounded-full p-2 bg-orange-500 hover:bg-orange-800">Hapus</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="flex justify-center p-4">
+                    <button type="button" class="w-[150px] p-2 rounded-lg text-white font-bold bg-orange-500 hover:bg-orange-800 hover:cursor-pointer" data-dismiss="modal">Bayar sekarang</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('document').ready(function () {
+        var token = localStorage.getItem('token');
+        $.ajax({
+            method: "GET",
+            url: "/Cart/CartList",
+            headers: {
+                "Authorization": "Bearer " + token
+            },
+            success: function (data) {
+                $('#cart-list').html(data);
+            }
+        });
+
+    });
+</script>

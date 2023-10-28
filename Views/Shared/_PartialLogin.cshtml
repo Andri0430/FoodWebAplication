@@ -1,0 +1,70 @@
+﻿@model LoginDto
+
+<h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Login Account</h3>
+<form class="space-y-6" id="login-form">
+    <div class="flex flex-col items-start">
+        <label asp-for="Email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+        <input type="email" asp-for="Email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@gmail.com" required>
+        <span asp-validation-for="Email" class="text-red-400 text-xs"></span>
+    </div>
+    <div class="flex flex-col items-start">
+        <label asp-for="Password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+        <input type="password" asp-for="Password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+        <span asp-validation-for="Password" class="text-red-400 text-xs"></span>
+    </div>
+    <button type="submit" class="w-full text-white bg-orange-700 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+    <div class="text-sm text-center font-medium text-gray-500 dark:text-gray-300">
+        Not registered? <a id="register" class="text-orange-700 hover:underline hover:cursor-pointer dark:text-orange-500">Create account</a>
+    </div>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    $('document').ready(function () {
+        $('#register').click(() => {
+            $.ajax({
+                type: 'GET',
+                url: '/Home/PartialRegister',
+                success: function (data) {
+                    $('#dynamic-form').html(data);
+                }
+            })
+        });
+
+        $('#login-form').submit(function (e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                url: "/Account/Login",
+                type: "POST",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.success) {
+                        localStorage.setItem("token", response.code);
+                        if (response.role == "Admin") {
+                            window.location.href = "/Dashboard/Menu";
+                        }
+                        else {
+                            window.location.href = "/Menu";
+                        }
+                    }
+                    else {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: response.message,
+                            icon: 'error',
+                            showConfirmButton: true,
+                            confirmButtonText: 'OK',
+                        });
+                    }
+                },
+            });
+        });
+    });
+</script>

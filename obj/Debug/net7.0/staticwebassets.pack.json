@@ -1,0 +1,341 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\373340e1-f7a3-4791-acd5-5c4a647307a7.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\373340e1-f7a3-4791-acd5-5c4a647307a7.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\4f498fcd-178e-46e5-bf84-d71a68d1157e.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\4f498fcd-178e-46e5-bf84-d71a68d1157e.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\51def9e2-6c5c-46bc-a37a-c9349250c01f.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\51def9e2-6c5c-46bc-a37a-c9349250c01f.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\669d6a27-273f-4fdc-be54-0b0e27a37967.png",
+      "PackagePath": "staticwebassets\\Uploads\\669d6a27-273f-4fdc-be54-0b0e27a37967.png"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\84343bc4-7ff9-4555-b2fe-94a2aa7e3371.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\84343bc4-7ff9-4555-b2fe-94a2aa7e3371.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\915311af-328d-43b2-b1b4-59eb8da512a6.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\915311af-328d-43b2-b1b4-59eb8da512a6.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\Jumbotoron.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Jumbotoron.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\a568ae43-7752-48f4-876a-c084fb498115.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\a568ae43-7752-48f4-876a-c084fb498115.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\b937614f-7dfd-4c19-865b-9df66ce08c0a.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\b937614f-7dfd-4c19-865b-9df66ce08c0a.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\bd41b7ed-aa4e-4634-9f93-4fcc44993a32.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\bd41b7ed-aa4e-4634-9f93-4fcc44993a32.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\bg.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\bg.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\c19d6f51-2cd3-4598-9791-ab5488c7f39c.png",
+      "PackagePath": "staticwebassets\\Uploads\\c19d6f51-2cd3-4598-9791-ab5488c7f39c.png"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\e586aeda-0836-4c95-acf9-369285a7e048.png",
+      "PackagePath": "staticwebassets\\Uploads\\e586aeda-0836-4c95-acf9-369285a7e048.png"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\ebd1ef0e-8de7-4333-8421-7101132c37bf.png",
+      "PackagePath": "staticwebassets\\Uploads\\ebd1ef0e-8de7-4333-8421-7101132c37bf.png"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\f3e091da-38ae-4a39-a332-2ff8226fab0d.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\f3e091da-38ae-4a39-a332-2ff8226fab0d.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\profile.png",
+      "PackagePath": "staticwebassets\\Uploads\\profile.png"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\slider1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\slider1.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\slider2.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\slider2.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\Uploads\\slider3.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\slider3.jpg"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Evolution\\FoodAplication\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FoodAplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FoodAplication.props",
+      "PackagePath": "build\\FoodAplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FoodAplication.props",
+      "PackagePath": "buildMultiTargeting\\FoodAplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FoodAplication.props",
+      "PackagePath": "buildTransitive\\FoodAplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,33 @@
+﻿<header class="relative top-0 p-2 bg-orange-700 text-white">
+    <nav class="bg-gray-800 px-4 bg-orange-700 lg:px-6 py-2.5 dark:bg-gray-800">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a class="flex items-center hover:text-orange-600 hover:cursor-pointer" href="/Menu">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-bold text-white dark:text-white">Poke Pizza</span>
+            </a>
+            <div id="login-checked" class="flex gap-6 items-center lg:order-2">
+                @await Html.PartialAsync("_PartialNotLogin")
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $('document').ready(function () {
+        var token = localStorage.getItem('token');
+        if (token != null) {
+            $.ajax({
+                type: "GET",
+                url: "/Account/PartialLoginCheked",
+                headers: {
+                    "Authorization": "Bearer " + token
+                },
+                success: function (data) {
+                    $("#login-checked").html(data);
+                }
+            });
+        }
+    });
+</script>

@@ -1,0 +1,130 @@
+﻿@model Menu
+
+<div class="modal fade" id="myModal-@Model.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-xl text-bold">Edit Menu @Model.Name</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="px-2 py-2 lg:px-4">
+                    <form class="space-y-1" id="myForm-@Model.Id">
+                        <input value="@Model.Id" id="id" hidden />
+                        <div class="flex gap-2 items-center justify-center w-full">
+                            <div class="flex flex-col items-start h-[82px] w-full">
+                                <label asp-for="Name" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Nama Menu</label>
+                                <input type="text" asp-for="Name" id="name" class="border bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                <span asp-validation-for="Name" id="menu-name" class="text-red-400 text-xs"></span>
+                            </div>
+                            <div class="flex flex-col items-start h-[82px] w-full">
+                                <label asp-for="Price" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
+                                <input id="price-input" type="text" asp-for="Price" class="border bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                                <span asp-validation-for="Price" id="menu-name" class="text-red-400 text-xs"></span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <label asp-for="Category.Id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori</label>
+                            <select asp-for="Category.Id" id="category-id" class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>Pilih kategori</option>
+                                <option value="1">Makanan</option>
+                                <option value="2">Minuman</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <label asp-for="Description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi</label>
+                            <textarea asp-for="Description" id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tulis deskripsi menu..."></textarea>
+                        </div>
+                        <div class="flex flex-col py-3 gap-3">
+                            <img src="http://localhost:5276/uploads/@Model.Foto" id="selected-image" class="w-[184px] h-[134px]" />
+                            <div class="flex flex-col items-start">
+                                <input asp-for="Foto" id="foto" class="block w-full text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file">
+                                <span class="block text-sm font-medium text-gray-900 dark:text-white">Ukuran gambar maksimal 15mb</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $('document').ready(function () {
+        $('#myForm-@Model.Id').submit(function (e) {
+            e.preventDefault();
+
+            var id = $('#id').val();
+            var name = $('#name').val();
+            var price = $('#price-input').val();
+            var categoryId = $('#category-id').val();
+            var description = $('#description').val();
+            var foto = $('#foto')[0].files[0];
+
+            var formData = new FormData();
+            formData.append('id', id);
+            formData.append('name', name);
+            formData.append('Price', price);
+            formData.append('IdCategory', categoryId);
+            formData.append('description', description);
+            formData.append('foto', foto);
+
+            $.ajax({
+                type: 'POST',
+                url: '/Dashboard/EditMenu',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (res) {
+                    if (res.success) {
+                        Swal.fire({
+                            title: 'Good job!',
+                            text: res.message,
+                            icon: 'success',
+                            showConfirmButton: true,
+                            confirmButtonText: 'OK',
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload();
+                            }
+                        });
+                    }
+                    else {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: res.message,
+                            icon: 'error',
+                            showConfirmButton: true,
+                            confirmButtonText: 'OK',
+                        });
+                    }
+                }
+            });
+        });
+
+        $('#price-input').on('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        $('#foto').on('change', function (event) {
+            var selectedImage = $('#selected-image');
+            var fileInput = event.target;
+
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    selectedImage.attr('src', e.target.result);
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                selectedImage.attr('src', '');
+            }
+        });
+    });
+</script>
